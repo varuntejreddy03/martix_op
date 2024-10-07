@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "app.py",  // Your main Python file
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "app.py"  // Your main Python file
+    }
+  ],
+  "env": {
+    "FLASK_ENV": "production" // Set your Flask environment
+  }
+}
